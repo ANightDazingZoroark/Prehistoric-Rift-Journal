@@ -118,14 +118,15 @@
                 search();
             }
             leftButton.onclick = function() {
-                test();
+                if (pageNum > 1) {
+                    pageNum--;
+                    changePage();
+                }
             }
             rightButton.onclick = function() {
                 if (pageNum < maxPageNum) {
-                    alert("yes");
-                }
-                else {
-                    alert("no");
+                    pageNum++;
+                    changePage();
                 }
             
             }
@@ -134,6 +135,7 @@
         function changeDisplayMode(choice) {
             displayMode = choice;
             if (displayMode == "all") {
+                var pageNum = 1;
                 maxPageNum = 2;
                 creatureList = ["anomalocaris", "apatosaurus", "baryonyx", "coelacanth", "dimetrodon", "direwolf", "dodo", "megaloceros", "megapiranha", "parasaurolophus", "sarcosuchus", "saurophaganax", "stegosaurus", "triceratops", "tyrannosaurus", "utahraptor"];
                 for (i = 0; i < 12; i++) {
@@ -217,6 +219,25 @@
                     document.getElementById("name-"+i.toString()).innerHTML = creatureList[i].charAt(0).toUpperCase() + creatureList[i].slice(1);
                 }
                 for (i = 1; i < 12; i++) {
+                    document.getElementById("icon-"+i.toString()).src="journal icons/none journal pic.png";
+                    document.getElementById("name-"+i.toString()).innerHTML = "???";
+                }
+            }
+        }
+
+        function changePage() {
+            if (displayMode == "all" && pageNum == 1) {
+                for (i = 0; i < 12; i++) {
+                    document.getElementById("icon-"+i.toString()).src = "journal icons/"+creatureList[i]+" journal pic.png";
+                    document.getElementById("name-"+i.toString()).innerHTML = creatureList[i].charAt(0).toUpperCase() + creatureList[i].slice(1);
+                }
+            }
+            else if (displayMode == "all" && pageNum == 2) {
+                for (i = 12; i < 16; i++) {
+                    document.getElementById("icon-"+(i-12).toString()).src = "journal icons/"+creatureList[i]+" journal pic.png";
+                    document.getElementById("name-"+(i-12).toString()).innerHTML = creatureList[i].charAt(0).toUpperCase() + creatureList[i].slice(1);
+                }
+                for (i = 4; i < 12; i++) {
                     document.getElementById("icon-"+i.toString()).src="journal icons/none journal pic.png";
                     document.getElementById("name-"+i.toString()).innerHTML = "???";
                 }
