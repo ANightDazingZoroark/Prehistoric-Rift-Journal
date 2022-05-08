@@ -79,30 +79,42 @@
 
         .journal-table-left {
             position: absolute;
-            top: 25%;
-            left: 25%;
+            top: 27.5%;
+            left: 20%;
             transform: translate(-25%, -25%);
             align-self: center;
             border: 1px solid black;
             border-spacing: 0;
+            width: 36%;
         }
-        
-        .journal-table-left tr, .journal-table-left td  {
+       
+        .journal-table-right {
+            position: absolute;
+            top: 27.5%;
+            right: 2%;
+            transform: translate(-25%, -25%);
+            align-self: center;
+            border: 1px solid black;
+            border-spacing: 0;
+            width: 36%;
+        }
+
+        .journal-table-left tr, .journal-table-left td, .journal-table-right tr, .journal-table-right td  {
             border: 1px solid black;
         }
     </style>
     <body>
         <nav>
-            <a class="dropdown-btn">Search</a>
-            <a class="dropdown-btn">All</a>
-            <a class="dropdown-btn">Dinosaurs</a>
-            <a class="dropdown-btn">Mammals</a>
-            <a class="dropdown-btn">Reptiles</a>
-            <a class="dropdown-btn">Fish</a>
-            <a class="dropdown-btn">Birds</a>
-            <a class="dropdown-btn">Amphibians</a>
-            <a class="dropdown-btn">Invertebrates</a>
-            <a class="dropdown-btn">Others</a>
+            <a class="dropdown-btn" id="search">Search</a>
+            <a class="dropdown-btn" id="all">All</a>
+            <a class="dropdown-btn" id="dinosaurs">Dinosaurs</a>
+            <a class="dropdown-btn" id="mammals">Mammals</a>
+            <a class="dropdown-btn" id="reptiles">Reptiles</a>
+            <a class="dropdown-btn" id="fish">Fish</a>
+            <a class="dropdown-btn" id="birds">Birds</a>
+            <a class="dropdown-btn" id="amphibians">Amphibians</a>
+            <a class="dropdown-btn" id="invertebrates">Invertebrates</a>
+            <a class="dropdown-btn" id="others">Others</a>
         </nav>
         <main>
             <center>
@@ -110,16 +122,30 @@
                     <img id="journal" src="journal background.png" style="width:90%; height:725px;">
                     <table class="journal-table-left">
                         <tr>
-                            <td>test 1</td>
-                            <td>test 2</td>
+                            <td><img src="journal icons/anomalocaris journal pic.png"><p>Anomalocaris</p></td>
+                            <td><img src="journal icons/apatosaurus journal pic.png"><p>Apatosaurus</p></td>
                         </tr>
                         <tr>
-                            <td>test 3</td>
-                            <td>test 4</td>
+                            <td><img src="journal icons/baryonyx journal pic.png"><p>Baryonyx</p></td>
+                            <td><img src="journal icons/coelacanth journal pic.png"><p>Coelacanth</p></td>
                         </tr>
                         <tr>
-                            <td>test 5</td>
-                            <td>test 6</td>
+                            <td><img src="journal icons/dimetrodon journal pic.png"><p>Dimetrodon</p></td>
+                            <td><img src="journal icons/direwolf journal pic.png"><p>Direwolf</p></td>
+                        </tr>
+                    </table>
+                    <table class="journal-table-right">
+                        <tr>
+                            <td><img src="journal icons/dodo journal pic.png"><p>Dodo</p></td>
+                            <td><img src="journal icons/megaloceros journal pic.png"><p>Megaloceros</p></td>
+                        </tr>
+                        <tr>
+                            <td><img src="journal icons/megapiranha journal pic.png"><p>Megapiranha</p></td>
+                            <td><img src="journal icons/parasaurolophus journal pic.png"><p>Parasaurolophus</p></td>
+                        </tr>
+                        <tr>
+                            <td><img src="journal icons/sarcosuchus journal pic.png"><p>Sarcosuchus</p></td>
+                            <td><img src="journal icons/saurophaganax journal pic.png"><p>Saurophaganax</p></td>
                         </tr>
                     </table>
                 </div>
