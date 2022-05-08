@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <title>Prehistoric Rift Journal</title>
+    <style>
+        body {
+            background-image: url("table background.png");
+        }
+
+        nav {
+            position: absolute;
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+        }
+
+        nav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: solid;
+            background: none;
+            width: 85.35%;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #f1f1f1;
+        }
+
+        main {
+            margin-left: 200px;
+            margin-top: -5px;
+            font-size: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            nav {padding-top: 15px;}
+            nav a {font-size: 18px;}
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: #964B00;
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            width: 84.75%;
+            height: 30px;
+        }
+
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .journal-content {
+            position: relative;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .journal-table-left {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-25%, -25%);
+            align-self: center;
+            border: 1px solid black;
+            border-spacing: 0;
+        }
+        
+        .journal-table-left tr, .journal-table-left td  {
+            border: 1px solid black;
+        }
+    </style>
+    <body>
+        <nav>
+            <a class="dropdown-btn">Search</a>
+            <a class="dropdown-btn">All</a>
+            <a class="dropdown-btn">Dinosaurs</a>
+            <a class="dropdown-btn">Mammals</a>
+            <a class="dropdown-btn">Reptiles</a>
+            <a class="dropdown-btn">Fish</a>
+            <a class="dropdown-btn">Birds</a>
+            <a class="dropdown-btn">Amphibians</a>
+            <a class="dropdown-btn">Invertebrates</a>
+            <a class="dropdown-btn">Others</a>
+        </nav>
+        <main>
+            <center>
+                <div class="journal-content">
+                    <img id="journal" src="journal background.png" style="width:90%; height:725px;">
+                    <table class="journal-table-left">
+                        <tr>
+                            <td>test 1</td>
+                            <td>test 2</td>
+                        </tr>
+                        <tr>
+                            <td>test 3</td>
+                            <td>test 4</td>
+                        </tr>
+                        <tr>
+                            <td>test 5</td>
+                            <td>test 6</td>
+                        </tr>
+                    </table>
+                </div>
+            </center>
+            <footer>
+                <table style="width:100%;">
+                    <tr>
+                        <td style="text-align:center;"><img src="arrowLeft.png" height="24"></td>
+                        <td style="text-align:center;"><img src="arrowRight.png" height="24"></td>
+                    </tr>
+                </table>
+            </footer>
+        </main>
+    </body>
+</html>
