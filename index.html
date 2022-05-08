@@ -269,7 +269,7 @@
         }
 
         function readJournal(num) {
-            journalPageNum= num
+            journalPageNum = num
             viewingJournal = true;
             if (displayMode == "all" && indexPageNum == 1) {
                 document.getElementById("journal").src = "journals/"+creatureList[num]+" journal.png";
@@ -277,7 +277,8 @@
                 document.getElementById("journal-table-right").style.visibility = "hidden";
             }
             else if (displayMode == "all" && indexPageNum == 2 && num < 4) {
-                document.getElementById("journal").src = "journals/"+creatureList[num+12]+" journal.png";
+                journalPageNum = num + 12;
+                document.getElementById("journal").src = "journals/"+creatureList[num + 12]+" journal.png";
                 document.getElementById("journal-table-left").style.visibility = "hidden";
                 document.getElementById("journal-table-right").style.visibility = "hidden";
             }
